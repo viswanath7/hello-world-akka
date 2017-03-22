@@ -10,10 +10,10 @@ It
  1. Defines an untyped actor called **_Greeter_**
  2. Defines a case class called '**_GreetingMessage_**' which represents the message that shall be handled by the actor
  3. It creates an application called '**_HelloWorld_**' that 
- ..* Creates an actor system
- ..* 2. Creates an actor
- ..* Sends message to that actor
- ..* Terminates the actor system
+ * Creates an actor system
+ * Creates an actor
+ * Sends message to that actor
+ * Terminates the actor system
  
 ## Execution 
 
