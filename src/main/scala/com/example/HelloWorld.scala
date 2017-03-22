@@ -33,6 +33,7 @@ object HelloWorld extends App {
 
   logger info "Creating the 'greeter' actor"
   // Properties of an actor along with an optional name are supplied to create an actor
+  // Props is the configuration class to specify options for creation of the actors
   val greeter = system.actorOf(Props[Greeter], "greeter")
 
   logger info "Asynchronously sending 'greeting message' to the 'greeter' actor ..."
