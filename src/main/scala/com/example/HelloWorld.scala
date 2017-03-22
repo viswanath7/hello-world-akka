@@ -36,7 +36,7 @@ object HelloWorld extends App {
   val greeter = system.actorOf(Props[Greeter], "greeter")
 
   logger info "Asynchronously sending 'greeting message' to the 'greeter' actor ..."
-  // ! is the tell message
+  // '!' is the tell method
   greeter ! GreetingMessage("Akka")
 
   logger info "Terminating the actor system ..."
