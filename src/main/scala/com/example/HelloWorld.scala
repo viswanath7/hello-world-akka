@@ -7,9 +7,9 @@ import org.slf4j.LoggerFactory
 case class GreetingMessage(name: String)
 
 // Create an actor by extending the 'Actor' trait
-class Greeter extends Actor {
+class GreeterActor extends Actor {
 
-  val logger = LoggerFactory getLogger "Greeter"
+  val logger = LoggerFactory getLogger getClass.getSimpleName
 
   // Define the partial function that takes anything and returns a unit
   def receive: PartialFunction[Any, Unit] = {
@@ -34,7 +34,7 @@ object HelloWorld extends App {
   logger info "Creating the 'greeter' actor"
   // Properties of an actor along with an optional name are supplied to create an actor
   // Props is the configuration class to specify options for creation of the actors
-  val greeter = system.actorOf(Props[Greeter], "greeter")
+  val greeter = system.actorOf(Props[GreeterActor], "greeter")
 
   logger info "Asynchronously sending 'greeting message' to the 'greeter' actor ..."
   // '!' is the tell method
